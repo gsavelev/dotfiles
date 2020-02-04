@@ -21,6 +21,7 @@ set nobackup
 
 " Pathogen package manager
 execute pathogen#infect()
+filetype plugin indent on
 
 " String enumeration
 set number
@@ -106,7 +107,7 @@ set scrolloff=5
 set sidescrolloff=5
 
 " Syntax highlighting
-syntax enable
+syntax on
 
 " MISCELLANEOUS OPTIONS
 " Display a confirmation dialog when closing an unsaved file
@@ -180,6 +181,14 @@ let javaScript_fold=1
 " Set indentLine plugin
 " Indent level has a distinct character
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+" Open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" Remap NERDTree to F6
+nmap <F6> :NERDTreeToggle<CR>
+" Toggle hidden files
+let NERDTreeShowHidden=1
 
 " Mapping
 " Map leader key
