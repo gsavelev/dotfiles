@@ -190,6 +190,9 @@ nmap <F6> :NERDTreeToggle<CR>
 " Toggle hidden files
 let NERDTreeShowHidden=1
 
+" Set ctrlp.vim plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Mapping
 " Map leader key
 let mapleader = "\<Space>"
