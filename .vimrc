@@ -189,8 +189,6 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 nmap <F6> :NERDTreeToggle<CR>
 " Toggle hidden files
 let NERDTreeShowHidden=1
-" Open a NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
 
 " Set ctrlp.vim plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
