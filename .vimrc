@@ -196,7 +196,16 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let mapleader = "\<Space>"
 " Other mapping
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>q :q<CR>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>p "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 nmap <silent> ,/ :nohlsearch<CR>
+
 " Remap NERDTree to Leader+n
 nmap <Leader>n :NERDTreeToggle<CR>
 
