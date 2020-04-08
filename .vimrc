@@ -13,24 +13,24 @@ set noerrorbells
 " Flash the screen instead of beeping on errors
 set visualbell
 
-" Set directory where Vim will try to store swap files
-set directory=$HOME/.vim/swp//
-
-" Disable backup files
+" Disable backup and swap files
 set nobackup
+set nowritebackup
+set noswapfile
 
 " Pathogen package manager
 execute pathogen#infect()
 filetype plugin indent on
 
-" String enumeration
-set number
-" Set relative numbers
-set relativenumber
-" Enable relative numbers only in Normal mode, and absolute numbers only in Insert mode
+" Showing line numbers and length
+set number          " show line numbers
+set colorcolumn=80
+set relativenumber  " set relative numbers
+
 augroup toggle_relative_number
-autocmd InsertEnter * :setlocal norelativenumber
-autocmd InsertLeave * :setlocal relativenumber
+autocmd InsertEnter * :setlocal norelativenumber    " absolute numbers only in Insert mode
+autocmd InsertLeave * :setlocal relativenumber      " enable relative numbers only in Normal mode
+
 
 " -- STATUS LINE --
 " Show status line
@@ -93,6 +93,7 @@ set expandtab
 " Don’t wrap lines
 set nowrap
 
+
 " -- TEXT RENDERING OPTIONS --
 " Use an encoding that supports Unicode
 set encoding=utf-8
@@ -109,6 +110,7 @@ set sidescrolloff=5
 " Syntax highlighting
 syntax on
 
+
 " MISCELLANEOUS OPTIONS
 " Display a confirmation dialog when closing an unsaved file
 set confirm
@@ -124,6 +126,7 @@ set undodir=~/.vim/undodir
 
 " Silent message like E45: 'readonly' option is set (add ! to override) by Ex command w!!
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 
 " -- EMMET CONFIG --
 " redefine trigger key
@@ -167,16 +170,22 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " Enable folding
 set foldenable
+
 " Open most of the folds by default. If set to 0, all folds will be closed
 set foldlevelstart=1
+
 " Folds can be nested. Setting a max value protects you from too many folds
 set foldnestmax=10
+
 " Defines the type of folding
 set foldmethod=syntax
+
 " sh - enable function folding
 let sh_fold_enabled=1
+
 " JavaScript
 let javaScript_fold=1
+
 
 " Set indentLine plugin
 " Indent level has a distinct character
@@ -185,15 +194,19 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " Open NERDTree automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
 " Toggle hidden files
 let NERDTreeShowHidden=1
 
 " Set ctrlp.vim plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Mapping
+
+" MAPPING
+
 " Map leader key
 let mapleader = "\<Space>"
+
 " Other mapping
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wq<CR>
@@ -206,11 +219,21 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 nmap <silent> ,/ :nohlsearch<CR>
 
+" Switch between tabs
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
+map  <C-n> :tabnew<CR>
+
+" easier moving of codes blocks
+vnoremap < <gv
+vnoremap > >gv
+
 " Remap NERDTree to Leader+n
 nmap <Leader>n :NERDTreeToggle<CR>
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
+
 " Remove trailing whitespaces automatically
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -220,3 +243,8 @@ inoremap <C-b> <esc><C-^>
 
 " Open up search instead of a man page on hitting K (script stored at /usr/local/bin/google)
 set keywordprg=google
+
+
+" =============================================================================
+" Python IDE Setup
+" =============================================================================
