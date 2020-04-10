@@ -158,7 +158,11 @@ let NERDTreeShowHidden=1              " toggle hidden files
 
 
 " Pathogen
+filetype off
+
 execute pathogen#infect()
+call pathogen#helptags()
+
 filetype plugin indent on
 
 
