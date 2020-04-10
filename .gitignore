@@ -5,7 +5,11 @@
 !.gitignore
 !.vimrc
 
-# And dirs
-!.vim/bundle/*
-!.vim/autoload/*
-!.vim/pack/*
+# And not these dirs
+!.vim
+!.vim/bundle
+!.vim/bundle/**
+!.vim/autoload
+!.vim/autoload/**
+!.vim/pack
+!.vim/pack/**
