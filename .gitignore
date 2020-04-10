@@ -5,11 +5,6 @@
 !.gitignore
 !.vimrc
 
-# And not these dirs
 !.vim/
-!.vim/bundle/
-!.vim/bundle/**
 !.vim/autoload/
-!.vim/autoload/**
-!.vim/pack/
-!.vim/pack/**
+!.vim/autoload/pathogen.vim
