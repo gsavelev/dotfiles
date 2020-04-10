@@ -4,3 +4,8 @@
 # But not these files
 !.gitignore
 !.vimrc
+
+# And dirs
+!.vim/bundle/*
+!.vim/autoload/*
+!.vim/pack/*
