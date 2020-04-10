@@ -176,8 +176,3 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊'] " indent level has a
 
 " Ctrlp.vim plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-
-" =============================================================================
-" Python IDE Setup
-" =============================================================================
