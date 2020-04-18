@@ -149,14 +149,6 @@ vnoremap K :m '<-2<CR>gv=gv
 " =============================================================================
 
 
-" NERDTree
-nmap <Leader>n :NERDTreeToggle<CR>    " remap to Leader+n
-autocmd StdinReadPre * let s:std_in=1 " open NERDTree automatically when vim
-                                      " starts up on opening a directory
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-let NERDTreeShowHidden=1              " toggle hidden files
-
-
 " Pathogen
 filetype off
 
@@ -170,9 +162,31 @@ filetype plugin indent on
 let g:user_emmet_leader_key=',' " redefine trigger key
 
 
+" =============================================================================
+" Python IDE Setup
+" =============================================================================
+
+
+" NERDTree
+nmap <Leader>n :NERDTreeToggle<CR>    " remap to Leader+n
+autocmd StdinReadPre * let s:std_in=1 " open NERDTree automatically when vim
+                                      " starts up on opening a directory
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+let NERDTreeShowHidden=1              " toggle hidden files
+
+
 " IndentLine
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] " indent level has a
                                                   " distinct character
 
 " Ctrlp.vim plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+
+" Pymode autocomplete - FIX ME
+let g:pymode_rope_completion = 1                " code completion support
+let g:pymode_rope_complete_on_dot = 1           " autocompletion on period
+
+
+" Python folding
+set nofoldenable
