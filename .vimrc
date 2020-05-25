@@ -130,13 +130,13 @@ inoremap <C-b> <esc><C-^>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>p "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-nmap <silent> ,/ :nohlsearch<CR>
+vmap <Leader>y                 "+y
+vmap <Leader>d                 "+d
+nmap <Leader>p                 "+p
+nmap <Leader>p                 "+P
+vmap <Leader>p                 "+p
+vmap <Leader>P                 "+P
+nmap <Leader>/ :nohlsearch<CR> " Turn off highlighting until the next search
 
 
 vnoremap . :normal.<CR>         " Make . to work with visually selected lines
