@@ -183,10 +183,14 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊'] " indent level has a
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
-" Pymode autocomplete - FIX ME
-let g:pymode_rope_completion = 1                " code completion support
-let g:pymode_rope_complete_on_dot = 1           " autocompletion on period
+" Pymode disable autocomplete (use jedi-vim)
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
 
 
 " Python folding
 set nofoldenable
+
+" jedi-vim
+let g:jedi#popup_select_first = 0 " disable choose first function at autocomplete
