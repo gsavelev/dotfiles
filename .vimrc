@@ -31,19 +31,6 @@ set cursorline   " set cursorline
 set ruler        " always show cursor position
 
 
-" Status line
-set laststatus=2         " show status line
-set statusline=%t        " tail of the filename
-set statusline+=\ %{&ff} " file format
-set statusline+=%h       " help file flag
-set statusline+=%m       " modified flag
-set statusline+=%r       " read only flag
-set statusline+=%y       " file type
-set statusline+=\ %c,    " cursor column
-set statusline+=%l/%L    " cursor line/total lines
-set statusline+=\ %P     " percent through file
-
-
 " Search
 set hlsearch            " highlight patterns in search
 set incsearch           " find the next match as we type the search
@@ -160,6 +147,12 @@ filetype plugin indent on
 
 " Emmet
 let g:user_emmet_leader_key=',' " redefine trigger key
+
+
+" Vim-airline
+let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
+let g:airline_theme='minimalist' " Theme
+let g:airline_powerline_fonts = 1 " Enable Powerline fonts
 
 
 " =============================================================================
