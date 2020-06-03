@@ -162,7 +162,7 @@ let g:airline#extensions#branch#enabled = 1  " Show git branch
 
 
 " NERDTree
-nmap <Leader>n :NERDTreeToggle<CR>    " remap to Leader+n
+nmap <Leader>N :NERDTreeToggle<CR>    " remap to Leader+N
 autocmd StdinReadPre * let s:std_in=1 " open NERDTree automatically when vim
                                       " starts up on opening a directory
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
@@ -185,6 +185,3 @@ let g:pymode_rope_complete_on_dot = 0
 
 " Python folding
 set nofoldenable
-
-" jedi-vim
-let g:jedi#popup_select_first = 0 " disable choose first function at autocomplete
