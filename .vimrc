@@ -150,7 +150,7 @@ let g:user_emmet_leader_key=',' " redefine trigger key
 
 
 " vim-airline
-let g:airline_theme = 'minimalist'           " Powerline theme
+let g:airline_theme = 'badwolf'              " Powerline theme
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
 let g:airline_powerline_fonts = 1            " Enable Powerline fonts
 let g:airline#extensions#branch#enabled = 1  " Show git branch
@@ -166,7 +166,7 @@ nmap <Leader>N :NERDTreeToggle<CR>    " remap to Leader+N
 autocmd StdinReadPre * let s:std_in=1 " open NERDTree automatically when vim
                                       " starts up on opening a directory
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-let NERDTreeShowHidden=1              " toggle hidden files
+let NERDTreeShowHidden=0              " toggle hidden files
 
 
 " IndentLine
@@ -177,11 +177,16 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊'] " indent level has a
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
-" Pymode disable autocomplete (use jedi-vim)
+" Pymode
+" Disable autocomplete (use jedi-vim)
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
 
+let g:pymode_virtualenv = 1 " enable virtualenv
+
+let g:pymode_breakpoint = 1 " enable breakpoints
+let g:pymode_breakpoint_key = '<leader>b'
 
 " Python folding
 set nofoldenable
