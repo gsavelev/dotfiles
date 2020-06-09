@@ -149,12 +149,17 @@ filetype plugin indent on
 let g:user_emmet_leader_key=',' " redefine trigger key
 
 
-" vim-airline
+" Airline
 let g:airline_theme = 'badwolf'              " Powerline theme
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
 let g:airline_powerline_fonts = 1            " Enable Powerline fonts
 let g:airline#extensions#branch#enabled = 1  " Show git branch
 
+
+" Auto-save
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_silent = 1  " do not display the auto-save notification
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " =============================================================================
 " Python IDE Setup
