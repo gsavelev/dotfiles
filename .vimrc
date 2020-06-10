@@ -190,3 +190,6 @@ let g:pymode_breakpoint_key = '<leader>b'
 
 " Python folding
 set nofoldenable
+
+" TaskList
+map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
