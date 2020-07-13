@@ -145,10 +145,6 @@ call pathogen#helptags()
 filetype plugin indent on
 
 
-" Emmet
-let g:user_emmet_leader_key=',' " redefine trigger key
-
-
 " Airline
 let g:airline_theme = 'badwolf'              " Powerline theme
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
