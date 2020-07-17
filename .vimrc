@@ -146,7 +146,7 @@ filetype plugin indent on
 
 
 " Airline
-let g:airline_theme = 'badwolf'              " Powerline theme
+let g:airline_theme = 'dark'                 " Ex. simple theme
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
 let g:airline_powerline_fonts = 1            " Enable Powerline fonts
 let g:airline#extensions#branch#enabled = 1  " Show git branch
