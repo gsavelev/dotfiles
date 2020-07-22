@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Paths to brew installed ...
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jora/.oh-my-zsh"
 
@@ -109,17 +112,13 @@ export PATH="/usr/local/bin:${PATH}"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# Path to brew installed Vim
+#
 alias vim="/usr/local/bin/vim"
-# Path to brew installed pip
-alias pip3='python3 -m pip'
-# Get random knot name
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
 alias knot="python /Users/jora/Nextcloud/Projects/scripts/rand_knot.py"
-# Command line alias to start the browser-sync server
 alias serve="browser-sync start --server --files ."
-# Generate passphrase
 alias genpass="openssl rand -base64 10"
-# Path alias to Go Design cloud
 alias cloud="cd /Volumes/go_design/"
 #
 # Syntax Highlighting
