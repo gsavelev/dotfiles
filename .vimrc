@@ -184,8 +184,7 @@ let g:pymode_virtualenv = 1 " enable virtualenv
 let g:pymode_breakpoint = 1 " enable breakpoints
 let g:pymode_breakpoint_key = '<leader>b'
 
-let g:pymode_run = 0 " disable Pymode run code
-nmap <Leader>e <Esc>:w<CR>:!clear; python %<CR> " exec and save in Python
+let g:pymode_run = 1 " enable Pymode run code
 
 " Python folding
 set nofoldenable
