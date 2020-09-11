@@ -131,6 +131,11 @@ vnoremap J :m '>+1<CR>gv=gv     " Move visual selection
 vnoremap K :m '<-2<CR>gv=gv
 
 
+" move vertically by visual line with j and k
+nnoremap j gj
+nnoremap k gk
+
+
 " =============================================================================
 " Plugins
 " =============================================================================
