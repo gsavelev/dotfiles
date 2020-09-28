@@ -120,6 +120,8 @@ alias knot="python /Users/jora/Nextcloud/Projects/scripts/rand_knot.py"
 alias serve="browser-sync start --server --files ."
 alias genpass="openssl rand -base64 10"
 alias cloud="cd /Volumes/go_design/"
+alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 #
 # Syntax Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
