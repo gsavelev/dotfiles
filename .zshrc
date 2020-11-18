@@ -114,7 +114,6 @@ export PATH="/usr/local/bin:${PATH}"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias vim="/usr/local/bin/vim"
-alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 alias knot="python /Users/jora/Nextcloud/Projects/scripts/rand_knot.py"
 alias serve="browser-sync start --server --files ."
@@ -125,3 +124,8 @@ alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.
 #
 # Syntax Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Python env
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
