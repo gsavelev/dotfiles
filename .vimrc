@@ -199,4 +199,4 @@ set nofoldenable
 map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
 
 " JSON formatting
-com! FormatJSON %!python -m json.tool
+com! FormatJSON %!python -m json.tool --no-ensure-ascii
