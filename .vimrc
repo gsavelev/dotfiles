@@ -190,7 +190,7 @@ let g:pymode_breakpoint = 1   " enable breakpoints
 let g:pymode_breakpoint_key = '<leader>b'
 
 let g:pymode_run = 0 " disable Pymode run code
-nmap <Leader>R :!python %<CR> " remap run code
+nmap <Leader>e :!python %<CR> " remap run code
 
 " Python folding
 set nofoldenable
