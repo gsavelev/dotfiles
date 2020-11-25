@@ -184,12 +184,13 @@ let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
 
-let g:pymode_virtualenv = 1 " enable virtualenv
+let g:pymode_virtualenv = 1   " enable virtualenv
 
-let g:pymode_breakpoint = 1 " enable breakpoints
+let g:pymode_breakpoint = 1   " enable breakpoints
 let g:pymode_breakpoint_key = '<leader>b'
 
-let g:pymode_run = 1 " enable Pymode run code
+let g:pymode_run = 0 " disable Pymode run code
+nmap <Leader>R :!python %<CR> " remap run code
 
 " Python folding
 set nofoldenable
