@@ -65,17 +65,9 @@ syntax on               " syntax highlighting
 let g:netrw_browse_split = 4 " Open files in split window
 let g:netrw_winsize = 80     " Set new split window size at 80%
 
-
+" TODO how to fold every function
 " Folding
 set foldenable          " enable folding
-set foldlevelstart=1    " open most of the folds by default.
-                        " If set to 0, all folds will be closed
-set foldnestmax=10      " folds can be nested.
-                        " Setting a max value protects you from too many folds
-set foldmethod=syntax   " defines the type of folding
-let sh_fold_enabled=1   " sh - enable function folding
-let javaScript_fold=1   " JavaScript
-
 
 " =============================================================================
 " Mapping
@@ -191,9 +183,6 @@ let g:pymode_breakpoint_key = '<leader>b'
 
 let g:pymode_run = 0 " disable Pymode run code
 nmap <Leader>e :!python %<CR> " remap run code
-
-" Python folding
-set nofoldenable
 
 " TaskList
 map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
