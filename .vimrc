@@ -65,10 +65,6 @@ syntax on               " syntax highlighting
 let g:netrw_browse_split = 4 " Open files in split window
 let g:netrw_winsize = 80     " Set new split window size at 80%
 
-" TODO how to fold every function
-" Folding
-set foldenable          " enable folding
-
 " =============================================================================
 " Mapping
 " =============================================================================
@@ -183,6 +179,10 @@ let g:pymode_breakpoint_key = '<leader>b'
 
 let g:pymode_run = 0 " disable Pymode run code
 nmap <Leader>e :!python %<CR> " remap run code
+
+" Folding
+set nofoldenable
+
 
 " TaskList
 map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
