@@ -2,6 +2,8 @@
 set noerrorbells                    " disable beep on errors
 set visualbell                      " flash the screen instead of beeping
                                     " on errors
+
+
 " silent message like E45: 'readonly' option is set ...
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 match ErrorMsg '\s\+$'              " highlight trailing whitespace
@@ -26,6 +28,7 @@ autocmd InsertEnter * :setlocal norelativenumber    " absolute numbers only
 autocmd InsertLeave * :setlocal relativenumber      " enable relative numbers
                                                     " only in Normal mode
 
+
 " Cursor
 set cursorline   " set cursorline
 set ruler        " always show cursor position
@@ -44,6 +47,7 @@ nnoremap N Nzz          " when n or N
 
 
 " Indentation
+" Real programmers don't use TAB but spaces
 set autoindent      " new lines inherit the indentation of previous lines
 set tabstop=4       " number of tabulation indents
 set shiftwidth=4    " indent size
@@ -64,6 +68,7 @@ syntax on               " syntax highlighting
 
 let g:netrw_browse_split = 4 " Open files in split window
 let g:netrw_winsize = 80     " Set new split window size at 80%
+
 
 " =============================================================================
 " Mapping
@@ -129,16 +134,20 @@ nnoremap k gk
 " =============================================================================
 
 
-" Pathogen
+" Setup Pathogen to manage your plugins
+" mkdir -p ~/.vim/autoload ~/.vim/bundle
+" curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+" Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 filetype off
-
 execute pathogen#infect()
 call pathogen#helptags()
+
 
 filetype plugin indent on
 
 
 " Airline
+" git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 let g:airline_theme = 'dark'                 " Ex. simple theme
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
 let g:airline_powerline_fonts = 1            " Enable Powerline fonts
@@ -151,6 +160,7 @@ let g:airline#extensions#branch#enabled = 1  " Show git branch
 
 
 " NERDTree
+" git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 nmap <Leader>N :NERDTreeToggle<CR>    " remap to Leader+N
 autocmd StdinReadPre * let s:std_in=1 " open NERDTree automatically when vim
                                       " starts up on opening a directory
@@ -159,14 +169,17 @@ let NERDTreeShowHidden=1              " toggle hidden files
 
 
 " IndentLine
+" git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] " indent level has a
                                                   " distinct character
 
 " Ctrlp.vim plugin
+" git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
 " Pymode
+" git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/bundle/
 " Disable autocomplete (use jedi-vim)
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
@@ -180,12 +193,17 @@ let g:pymode_breakpoint_key = '<leader>b'
 let g:pymode_run = 0 " disable Pymode run code
 nmap <Leader>e :!python %<CR> " remap run code
 
-" Folding
+
+" Python folding
+" mkdir -p ~/.vim/ftplugin
+" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 set nofoldenable
 
 
 " TaskList
+" git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/bundle/
 map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
+
 
 " JSON formatting
 com! FormatJSON %!python -m json.tool --no-ensure-ascii
