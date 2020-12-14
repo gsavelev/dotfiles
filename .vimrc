@@ -193,6 +193,12 @@ let g:pymode_breakpoint_key = '<leader>b'
 let g:pymode_run = 0 " disable Pymode run code
 nmap <Leader>e :!python %<CR> " remap run code
 
+" ipnb breakpoints
+" change 2-nd parameter in
+" vim ~/.vim/bundle/python-mode/plugin/pymode.vim +177
+" to
+" from ipdb import set_trace; set_trace()
+
 
 " Python folding
 " mkdir -p ~/.vim/ftplugin
