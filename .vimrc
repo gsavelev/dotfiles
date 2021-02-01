@@ -191,8 +191,7 @@ let g:pymode_virtualenv = 1   " enable virtualenv
 let g:pymode_breakpoint = 1   " enable breakpoints
 let g:pymode_breakpoint_key = '<leader>b'
 
-let g:pymode_run = 0 " disable Pymode run code
-nmap <Leader>e :!python %<CR> " remap run code
+let g:pymode_run = 1 " enable Pymode run code
 
 " ipnb breakpoints
 " change 2-nd parameter in
