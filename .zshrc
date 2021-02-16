@@ -1,20 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Paths to brew installed ...
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
-
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jora/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-DEFAULT_USER=`whoami`
-# Short time format
-POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -51,6 +45,8 @@ POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -74,22 +70,13 @@ POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    git zsh-autosuggestions
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# Path to Node.js modules
-export NODE_PATH="$HOME/.node_modules"
-
-# Paths to brew installed ...
-export PATH="/usr/local/bin:${PATH}"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -112,23 +99,3 @@ export PATH="/usr/local/bin:${PATH}"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-alias vim="/usr/local/bin/vim"
-alias pip="/usr/local/bin/pip3"
-alias knot="python /Users/jora/Nextcloud/Projects/scripts/rand_knot.py"
-alias serve="browser-sync start --server --files ."
-alias genpass="openssl rand -base64 10"
-alias cloud="cd /Volumes/go_design/"
-alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-#
-# Syntax Highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Python env
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# Added on the go
