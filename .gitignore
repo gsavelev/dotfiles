@@ -5,7 +5,3 @@
 !.gitignore
 !.vimrc
 !.zshrc
-
-!.vim/
-!.vim/autoload/
-!.vim/autoload/pathogen.vim
