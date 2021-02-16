@@ -170,17 +170,17 @@ let g:NERDTreeWinSize=22
 
 
 " IndentLine
-" git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/
+" git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] " indent level has a
                                                   " distinct character
 
 " Ctrlp.vim plugin
-" git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/
+" git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
 " Pymode
-" git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/bundle/
+" git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/bundle/python-mode
 " Disable autocomplete (use jedi-vim)
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
@@ -207,7 +207,8 @@ set nofoldenable
 
 
 " TaskList
-" git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/bundle/
+" mkdir -p ~/.vim/tasklist
+" wget -O ~/.vim/tasklist/tasklist.vim https://github.com/vim-scripts/TaskList.vim/blob/master/plugin/tasklist.vim
 map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
 
 
