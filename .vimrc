@@ -150,7 +150,7 @@ filetype plugin indent on
 " git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 let g:airline_theme = 'dark'                 " Ex. simple theme
 let g:airline#extensions#tabline#enabled = 1 " Smarter tab line
-let g:airline_powerline_fonts = 1            " Enable Powerline fonts
+let g:airline_powerline_fonts = 0            " Disable Powerline fonts
 let g:airline#extensions#branch#enabled = 1  " Show git branch
 
 
