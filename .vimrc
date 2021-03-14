@@ -213,8 +213,8 @@ map <F2> :TaskList<CR> " show task list (TODO, FIXME, XXX lines) on F2
 
 
 " tcomment_vim
-" mkdir -p ~/.vim/pack/tml/start/
-" git clone https://github.com/tomtom/tcomment_vim ~/.vim/pack/tml/start/
+" mkdir -p ~/.vim/pack/tml/start/tcomment
+" git clone https://github.com/tomtom/tcomment_vim ~/.vim/pack/tml/start/tcomment
 
 
 " JSON formatting
