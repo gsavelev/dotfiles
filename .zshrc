@@ -114,3 +114,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# PATH to cargo
+export PATH="$HOME/.cargo/bin:$PATH"
