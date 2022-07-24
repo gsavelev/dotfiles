@@ -1,6 +1,5 @@
 # Ignore everything
 *
-My Drive/
 
 # But not these files
 !.gitignore
