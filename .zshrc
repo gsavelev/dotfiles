@@ -140,3 +140,7 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+# Add PySpark to use Jupyter
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS=’lab’
