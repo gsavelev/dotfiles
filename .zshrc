@@ -144,5 +144,5 @@ fi
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS=’lab’
 
-export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.0/libexec
+export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
