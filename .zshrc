@@ -102,13 +102,6 @@ source $ZSH/oh-my-zsh.sh
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 
 
-export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS=’lab’
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -123,3 +116,15 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+# >>> jEnv initialize >>>
+eval "$(jenv init -)"
+# <<< jEnv initialize <<<
+
+
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS=’lab’
+export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
