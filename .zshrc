@@ -121,11 +121,5 @@ unset __conda_setup
 
 # >>> jEnv initialize >>>
 eval "$(jenv init -)"
-# <<< jEnv initialize <<<
-
-
-export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS=’lab’
-export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.4.1/libexec
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
+# <<< jEnv initialize <<<
