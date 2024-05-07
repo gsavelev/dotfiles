@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
-alias cgit="change_git.sh"
+alias cgit="change-git.sh"
 
 
 # >>> conda initialize >>>
