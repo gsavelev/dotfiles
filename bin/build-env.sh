@@ -9,8 +9,5 @@ mv ~/dotfiles/.zshrc ~/.zshrc
 zsh
 
 # vim
-sudo apt-get install zsh -y
+sudo apt-get install vim
 mv ~/dotfiles/.vimrc ~/.vimrc
-
-# cleanup
-rm -rf ~/dotfiles
