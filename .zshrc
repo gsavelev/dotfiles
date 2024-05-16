@@ -118,9 +118,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-
-# >>> jEnv initialize >>>
-eval "$(jenv init -)"
-export PATH="$HOME/.jenv/bin:$PATH"
-# <<< jEnv initialize <<<
