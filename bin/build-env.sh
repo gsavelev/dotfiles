@@ -10,5 +10,6 @@ zsh
 
 #vim
 apt-get install zsh -y
+mkdir $HOME/.vim/
 cp -rp $HOME/dotfiles/.vim/* $HOME/.vim/
 cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
