@@ -5,5 +5,10 @@ apt-get update
 apt-get install zsh -y
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-mv $HOME/dotfiles/.zshrc $HOME/.zshrc
+cp -p $HOME/dotfiles/.zshrc $HOME/.zshrc
 zsh
+
+#vim
+apt-get install zsh -y
+cp -rp $HOME/dotfiles/.vim/* $HOME/.vim/
+cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
