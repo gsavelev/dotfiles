@@ -1,5 +1,6 @@
 #!/bin/bash
 apt-get update
+git submodule update --init --recursive
 
 # zsh
 apt-get install zsh -y
@@ -8,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 cp -p $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 #vim
-apt-get install zsh -y
+apt-get install vim -y
 mkdir $HOME/.vim/
 cp -rp $HOME/dotfiles/.vim/* $HOME/.vim/
 cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
