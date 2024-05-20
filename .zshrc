@@ -95,14 +95,15 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Path to my CLI utils.
+export PATH="$HOME/bin:$PATH"
+
+# Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
-alias cgit="change-git.sh"
-
+alias cgit="bin/cgit/cgit.sh"
+alias genpw="bin/genpw/genpw.sh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
