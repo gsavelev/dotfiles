@@ -102,8 +102,8 @@ export PATH="$HOME/bin:$PATH"
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
-alias cgit="bin/cgit/cgit.sh"
-alias genpw="bin/genpw/genpw.sh"
+alias cgit="$HOME/bin/cgit/cgit.sh"
+alias genpw="$HOME/bin/genpw/genpw.sh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
