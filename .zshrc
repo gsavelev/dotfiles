@@ -96,22 +96,23 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Set color variables for Zsh
-RED="%F{1}"     # Red
-YELLOW="%F{3}"  # Yellow
-GREEN="%F{2}"   # Green
-RESET="%f"      # Reset color
-NEWLINE=$'\n'   # Add new line
+RED="%F{1}"
+GREEN="%F{2}"
+YELLOW="%F{3}"
+BLUE="%F{4}"
+RESET="%f"
+NEWLINE=$'\n'
 
 # Function to show current Git branch
-git_branch() {
+blue_git_branch() {
   branch=$(git symbolic-ref --short HEAD 2>/dev/null)
   if [ -n "$branch" ]; then
-    echo "on git:${branch}"
+    echo "on git:${BLUE}${branch}${RESET}"
   fi
 }
 
 # Set the Zsh prompt
-export PS1="${RED}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(git_branch)${NEWLINE}\$ "
+export PS1="${RED}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(blue_git_branch)${NEWLINE}\$ "
 
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
