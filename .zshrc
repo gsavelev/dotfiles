@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="intheloop"
+# ZSH_THEME="intheloop"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,9 +72,8 @@ ZSH_THEME="intheloop"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
+source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -96,14 +95,32 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Path to my CLI utils.
-export PATH="$HOME/bin:$PATH"
+# Set color variables for Zsh
+RED="%F{1}"     # Red
+YELLOW="%F{3}"  # Yellow
+GREEN="%F{2}"   # Green
+RESET="%f"      # Reset color
+NEWLINE=$'\n'   # Add new line
+
+# Function to show current Git branch
+git_branch() {
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  if [ -n "$branch" ]; then
+    echo "on git:${branch}"
+  fi
+}
+
+# Set the Zsh prompt
+export PS1="${RED}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(git_branch)${NEWLINE}\$ "
 
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
 alias cgit="$HOME/bin/cgit/cgit.sh"
 alias genpw="$HOME/bin/genpw/genpw.sh"
+
+# Path to my CLI utils.
+export PATH="$HOME/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
