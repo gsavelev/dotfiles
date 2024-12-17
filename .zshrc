@@ -104,15 +104,15 @@ RESET="%f"
 NEWLINE=$'\n'
 
 # Function to show current Git branch
-blue_git_branch() {
+red_git_branch() {
   branch=$(git symbolic-ref --short HEAD 2>/dev/null)
   if [ -n "$branch" ]; then
-    echo "on git:${BLUE}${branch}${RESET}"
+    echo "on git:${RED}${branch}${RESET}"
   fi
 }
 
 # Set the Zsh prompt
-export PS1="${RED}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(blue_git_branch)${NEWLINE}\$ "
+export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(red_git_branch)${NEWLINE}\$ "
 
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
