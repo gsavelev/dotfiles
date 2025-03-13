@@ -16,6 +16,6 @@ cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
 
 #utils
 mkdir $HOME/bin/utils
-cp -rp $HOME/dotfiles/utils/* $HOME/bin/utils
+cp -rp $HOME/dotfiles/bin/utils/* $HOME/bin/utils
 
 zsh
