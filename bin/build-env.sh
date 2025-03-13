@@ -14,4 +14,8 @@ mkdir $HOME/.vim/
 cp -rp $HOME/dotfiles/.vim/* $HOME/.vim/
 cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
 
+#utils
+mkdir $HOME/bin/utils
+cp -rp $HOME/dotfiles/utils/* $HOME/bin/utils
+
 zsh
