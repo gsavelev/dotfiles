@@ -100,6 +100,7 @@ RED="%F{1}"
 GREEN="%F{2}"
 YELLOW="%F{3}"
 BLUE="%F{4}"
+MAGENTA="%F{5}"
 RESET="%f"
 NEWLINE=$'\n'
 
@@ -119,7 +120,7 @@ smart_git_branch() {
 }
 
 # Set the prompt
-export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(smart_git_branch)${NEWLINE}${BLUE}>${RESET} "
+export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${MAGENTA}%~${RESET} \$(smart_git_branch)${NEWLINE}${MAGENTA}❯${RESET} "
 
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
