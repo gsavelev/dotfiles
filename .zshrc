@@ -104,15 +104,22 @@ RESET="%f"
 NEWLINE=$'\n'
 
 # Function to show current Git branch
-red_git_branch() {
+smart_git_branch() {
   branch=$(git symbolic-ref --short HEAD 2>/dev/null)
   if [ -n "$branch" ]; then
-    echo "on git:${RED}${branch}${RESET}"
+    # Check if working directory is clean
+    if git diff --quiet && git diff --staged --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+      # Clean: green branch
+      echo "on git:${GREEN}${branch}${RESET}"
+    else
+      # Dirty: red branch
+      echo "on git:${RED}${branch}${RESET}"
+    fi
   fi
 }
 
 # Set the prompt
-export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(red_git_branch)${NEWLINE}${BLUE}>${RESET} "
+export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${GREEN}%~${RESET} \$(smart_git_branch)${NEWLINE}${BLUE}>${RESET} "
 
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
