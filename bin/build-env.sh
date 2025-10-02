@@ -8,13 +8,17 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 cp -p $HOME/dotfiles/.zshrc $HOME/.zshrc
 
-#vim
+# vim
 apt-get install vim -y
 mkdir $HOME/.vim/
 cp -rp $HOME/dotfiles/.vim/* $HOME/.vim/
 cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
 
-#utils
+# tldr
+apt-get install tldr -y
+mkdir -p /root/.local/share
+
+# utils
 mkdir -p $HOME/bin/utils
 cp -rp $HOME/dotfiles/bin/utils/* $HOME/bin/utils
 
