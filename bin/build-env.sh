@@ -17,6 +17,7 @@ cp -rp $HOME/dotfiles/.vimrc $HOME/.vimrc
 # tldr
 apt-get install tldr -y
 mkdir -p /root/.local/share
+tldr --update
 
 # utils
 mkdir -p $HOME/bin/utils
