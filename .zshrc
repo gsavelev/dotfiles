@@ -122,32 +122,18 @@ smart_git_branch() {
 # Set the prompt
 export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${MAGENTA}%~${RESET} \$(smart_git_branch)${NEWLINE}${MAGENTA}❯${RESET} "
 
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export CLOUDSDK_PYTHON="/usr/bin/python3"
+
 # Aliases
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
 alias cgit="$HOME/bin/utils/cgit.sh"
 alias genpw="$HOME/bin/utils/genpw.sh"
 
-# Path to my CLI utils.
-export PATH="$HOME/bin:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/leonardo/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-export PATH="$HOME/.local/bin:$PATH"
