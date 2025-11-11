@@ -124,9 +124,12 @@ export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${MAGENTA}%~${RESET} \$(
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
 export CLOUDSDK_PYTHON="/usr/bin/python3"
 
 # Aliases
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
 alias cgit="$HOME/bin/utils/cgit.sh"
