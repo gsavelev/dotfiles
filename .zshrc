@@ -122,28 +122,16 @@ smart_git_branch() {
 # Set the prompt
 export PS1="${BLUE}%n${RESET} at ${YELLOW}%m${RESET} in ${MAGENTA}%~${RESET} \$(smart_git_branch)${NEWLINE}${MAGENTA}❯${RESET} "
 
+# Set exports
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
 export CLOUDSDK_PYTHON="/usr/bin/python3"
 
-# Aliases
+# and aliases
 alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias st="speedtest"
 alias cgit="$HOME/bin/utils/cgit.sh"
 alias genpw="$HOME/bin/utils/genpw.sh"
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/leonardo/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/g/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/g/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/g/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/g/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
