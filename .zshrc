@@ -127,6 +127,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
 export CLOUDSDK_PYTHON="/usr/bin/python3"
+export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
 
 # and aliases
 alias python="/usr/local/bin/python3"
